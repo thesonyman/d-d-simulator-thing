@@ -24,14 +24,14 @@ for i in range(0, 1000):
             hit = random.randint(1, 20)
             if hit >= 10:
                 en_health = en_health - random.randint(1, 4)
-            if en_health >= 0:
+            if en_health <= 0:
                 en_Guards = en_Guards - 1
                     #print("dead guard")
                 en_health = 15
             hit = random.randint(1, 20)
             if hit >= 10:
                 hum_health = hum_health - random.randint(1, 8)
-            if hum_health >= 0:
+            if hum_health <= 0:
                 humans = humans - 1
                 #print("dead human")
                 hum_health = 15
@@ -57,7 +57,7 @@ for i in range(0, 1000):
 
     if x <= 0:
         print ("Done")
-        cats = gwin
-        dogs = enwin
+        cats = gwin 
+        dogs = enwin  #had to do this to convert it to a double.
         print cats
         print dogs
